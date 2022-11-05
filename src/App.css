@@ -16,13 +16,17 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/*
+  display: flex;
+  flex-direction: row;
+*/
 
 .App-link {
   color: #61dafb;
@@ -34,5 +38,164 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+.search {
+  height: 35px;
+  width: 98%;
+  border-radius: 5px;
+  position: sticky;
+}
+
+.PokemonListItem {
+  background-color: #535b6b;
+  border-radius: 20px;
+  margin: 10px 0px;
+  padding: 10px;
+  width: auto;
+  border-style: solid;
+}
+
+.PokemonListItem:hover {
+
+  background-color: #808ba3;
+}
+
+div .PokemonListItem {
+  text-align: left;
+}
+
+.PokemonListItemRow {
+  margin: 0px 10px;
+}
+
+.test {
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+hr {
+  margin: 5px;
+}
+
+/*
+.PokemonListItemName {
+  margin: 10px;
+  vertical-align: top;
+}
+*/
+.Label {
+  font-size: 17px;
+}
+
+.Type {
+  background-color: #282c34;
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 5px 10px;
+  margin: 4px;
+}
+/*
+.Ability {
+  background-color: #282c34;
+  border-radius: 10px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+.ListContainer {
+  display: block;
+  position: static;
+  margin: auto;  
+  width: 500px;
+}
+
+
+
+.ThreeContainer {
+  background-color: #535b6b;
+  border-radius: 20px;
+  display: block;
+  position: fixed;
+  
+  display: flex;
+  flex-direction: column;
+  top: 45%;
+  transform: translate(0%, -50%);
+}
+
+.CircleContainer {
+  width: 200px;
+  height: 200px;
+  width: 30vw;
+  height: 30vw;
+
+  display: inline-block;
+}
+
+.StatsContainer {
+  width: 200px;
+  height: 100px;
+  width: 30vw;
+  height: 15vw;
+  border-style: solid;
+  display: inline-block;
+}
+
+.BarDescriptor {
+  font-size: 10px;
+  font-size: 2vw;
+  margin: 10px;
+}
+
+.BarDescriptions {
+  display: flex;
+  flex-direction: row;
+  font-size: 2vw;
+}
+
+.BarDescriptions > div {
+  margin: 0.75vw;
+}
+
+@media (max-width: 1300px) {
+  .ThreeContainer {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    flex-direction: row;
+  }
+  .CircleContainer {
+    width: 50vw;
+    height: 50vw;
+  }
+  .StatsContainer {
+    width: 50vw;
+    height: 25vw;
+    border-style: none;
+  }
+
+  .BarDescriptions {
+    font-size: 3vw;
+  }
+  
+  .BarDescriptions > div {
+    margin: 1.5vw;
   }
 }

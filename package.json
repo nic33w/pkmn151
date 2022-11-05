@@ -1,21 +1,39 @@
 {
   "name": "relay-tut",
   "version": "0.1.0",
+  "homepage": "https://nic33w.github.io/pkmn151",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^9.36.0",
+    "@react-three/fiber": "^8.8.10",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "get-graphql-schema": "^2.1.2",
+    "gh-pages": "^4.0.0",
+    "graphql-cli": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-relay": "^14.1.0",
     "react-scripts": "5.0.1",
+    "relay-runtime": "^14.1.0",
+    "three": "^0.145.0",
+    "typescript": "^4.8.4",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "yarn run relay && react-scripts start",
+    "build": "yarn run relay && react-scripts build",
+    "relay": "yarn run relay-compiler",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "relay": {
+    "src": "./src/",
+    "schema": "./schema.graphql",
+    "language": "javascript"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "^14.1.0",
+    "relay-compiler": "^14.1.0"
   }
 }
